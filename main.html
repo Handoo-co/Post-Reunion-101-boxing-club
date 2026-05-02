@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minuta de Reunión: 101-Boxing Club</title>
+    <style>
+        :root {
+            --bg-color: #f4f5f7;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-muted: #666666;
+            --accent-color: #d90429; /* Rojo boxeo */
+            --header-bg: #2b2d42; /* Azul muy oscuro/Negro */
+            --border-radius: 12px;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--header-bg);
+            color: white;
+            padding: 2rem 5%;
+            text-align: center;
+            border-bottom: 5px solid var(--accent-color);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            margin: 10px 0 0 0;
+            color: #a8dadc;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 5%;
+        }
+
+        /* Sección de Síntesis / Oportunidades */
+        .highlight-box {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .highlight-box h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .highlight-box ul {
+            margin: 0;
+            padding-left: 20px;
+            font-weight: 500;
+        }
+
+        /* Grid de Entrevistas */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--header-bg);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: var(--header-bg);
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .tag {
+            background-color: #edf2f4;
+            color: var(--header-bg);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .section-title {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        ul.notes-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul.notes-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            color: var(--text-muted);
+        }
+
+        ul.notes-list li::before {
+            content: "🥊";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-size: 0.9rem;
+        }
+
+        /* Tabla comparativa/operativa */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+            background: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background-color: var(--header-bg);
+            color: white;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>101-Boxing Club</h1>
+        <p>Minuta de Levantamiento de Requerimientos</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- Alerta de Necesidad Principal (El reto que te pusieron) -->
+        <div class="highlight-box">
+            <h2>🎯 El Gran Reto: "Quieren que los sorprendamos"</h2>
+            <ul>
+                <li>Urge modernizar la captación: Migrar de embudos en <strong>EXCEL</strong> a un ecosistema digital sólido.</li>
+                <li>Hay que reactivar la <strong>App</strong>, actualmente nadie la usa.</li>
+                <li>Objetivo: Mantener a los clientes fieles (60% de la base), bien atendidos, pero escalar la adquisición de nuevos clientes.</li>
+            </ul>
+        </div>
+
+        <div class="grid">
+            <!-- Columna Catalina -->
+            <div class="card">
+                <h2>Charla con Catalina <span class="tag">Visión y Marketing</span></h2>
+                
+                <div class="section-title">Identidad del Club</div>
+                <ul class="notes-list">
+                    <li>Fundado por "Gomosos" del boxeo. Primer gym dedicado solo a este deporte.</li>
+                    <li>Concepto de Comunidad, club y camaradería.</li>
+                    <li>Enfoque en rutina y disciplina (el boxeador también corre).</li>
+                    <li>Entrenan profesionales a nivel mundial.</li>
+                    <li>Tienen su propia línea de productos.</li>
+                </ul>
+
+                <div class="section-title">Público Objetivo</div>
+                <ul class="notes-list">
+                    <li>Estrato alto / Gente joven.</li>
+                    <li><strong>70% del mercado son mujeres:</strong> Buscan sentirse bonitas, activas y fuertes.</li>
+                </ul>
+
+                <div class="section-title">Dolores y Necesidades</div>
+                <ul class="notes-list">
+                    <li>Falta un buen embudo digital.</li>
+                    <li>Nadie usa la App móvil.</li>
+                    <li>Necesitan: Clientes fieles, contentos, bien atendidos y <strong>MÁS clientes</strong>.</li>
+                </ul>
+            </div>
+
+            <!-- Columna Juliana -->
+            <div class="card">
+                <h2>Charla con Juliana <span class="tag">Operaciones y Datos</span></h2>
+                
+                <div class="section-title">Stack Tecnológico Actual</div>
+                <ul class="notes-list">
+                    <li>Utilizan el software <strong>GYMSOFT</strong>.</li>
+                    <li>Gestión de embudo de ventas manual / sistema en <strong>EXCEL</strong>.</li>
+                </ul>
+
+                <div class="section-title">Demografía y Retención</div>
+                <ul class="notes-list">
+                    <li>Percibe un <strong>50% - 50%</strong> entre hombres y mujeres (contraste interesante con el 70% de Catalina).</li>
+                    <li>Alta fidelidad: <strong>60%</strong> de sus clientes están con ellos desde hace años.</li>
+                    <li>Reitera la asistencia de muchos profesionales.</li>
+                </ul>
+
+                <div class="section-title">Dolores y Necesidades Operativas</div>
+                <ul class="notes-list">
+                    <li>La información del negocio está actualmente <strong>desorganizada</strong>.</li>
+                    <li>Dificultad para llevar la información a todos los disponibles de manera eficiente.</li>
+                    <li>Destaca que la <strong>Atención al cliente</strong> es sumamente importante.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Tabla de Diagnóstico Cruzado -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Área</th>
+                    <th>Estado Actual</th>
+                    <th>Oportunidad de Mejora / Propuesta</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Ventas y Marketing</strong></td>
+                    <td>Falta de embudo digital, uso de Excel para leads.</td>
+                    <td>Implementación de un CRM / Automatización del embudo digital.</td>
+                </tr>
+                <tr>
+                    <td><strong>Tecnología</strong></td>
+                    <td>Uso de GymSoft + App inactiva. Información desorganizada.</td>
+                    <td>Centralizar la data, crear estrategia de adopción para la App y mejorar la comunicación interna.</td>
+                </tr>
+                <tr>
+                    <td><strong>Retención y Comunidad</strong></td>
+                    <td>60% de fidelidad, enfoque en comunidad, estrato alto, 70% mujeres.</td>
+                    <td>Programa de lealtad automatizado, up-selling con línea de productos, enfoque de marketing en empoderamiento femenino.</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</body>
+</html>
